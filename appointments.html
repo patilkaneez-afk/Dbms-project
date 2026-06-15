@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointments</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📋 Appointments</h1>
+
+    <table>
+
+        <tr>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Department</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Action</th>
+        </tr>
+
+        {% for appointment in appointments %}
+
+        <tr>
+
+            <td>{{ appointment.patient_name }}</td>
+
+            <td>{{ appointment.doctor }}</td>
+
+            <td>{{ appointment.department }}</td>
+
+            <td>{{ appointment.date }}</td>
+
+            <td>{{ appointment.time }}</td>
+
+            <td>
+
+                <a class="delete-btn"
+                   href="/delete/{{ appointment._id }}"
+                   onclick="return confirm('Delete this appointment?')">
+
+                    Delete
+
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a class="btn" href="/dashboard">
+        ⬅ Back to Dashboard
+    </a>
+
+</div>
+
+</body>
+</html>
+

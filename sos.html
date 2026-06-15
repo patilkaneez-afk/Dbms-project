@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Emergency SOS</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>🚨 Emergency SOS</h1>
+
+<form action="/send_sos" method="POST">
+
+<input type="text"
+name="patient_name"
+placeholder="Patient Name"
+required>
+
+<input type="text"
+name="phone"
+placeholder="Phone Number"
+required>
+
+<select name="emergency" required>
+
+<option value="">
+Select Emergency
+</option>
+
+<option>Heart Attack</option>
+
+<option>Accident</option>
+
+<option>Breathing Problem</option>
+
+<option>High Fever</option>
+
+</select>
+
+<input type="text"
+name="location"
+placeholder="Current Location"
+required>
+
+<button type="submit">
+🚨 Send SOS Alert
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

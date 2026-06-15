@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏥 Healthcare Dashboard</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>Total Patients</h2>
+            <h3>{{ total_patients }}</h3>
+        </div>
+
+        <div class="card">
+            <h2>Appointments</h2>
+            <h3>{{ total_appointments }}</h3>
+        </div>
+
+        <div class="card">
+            <h2>🚨 SOS Requests</h2>
+            <h3>{{ total_sos }}</h3>
+        </div>
+
+    </div>
+
+    <br>
+
+    <a class="btn" href="/book">
+        📅 Book Appointment
+    </a>
+
+    <a class="btn" href="/appointments">
+        📋 View Appointments
+    </a>
+
+    <a class="btn sos" href="/sos">
+        🚨 Emergency SOS
+    </a>
+
+    <a class="btn" href="/logout">
+        🚪 Logout
+    </a>
+
+</div>
+
+</body>
+</html>

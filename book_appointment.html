@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Appointment</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Book Appointment</h1>
+
+<form action="/book_appointment" method="POST">
+
+<input type="text"
+name="patient_name"
+placeholder="Patient Name"
+required>
+
+<select name="department" required>
+
+<option value="">Select Department</option>
+
+<option>Cardiology</option>
+
+<option>Neurology</option>
+
+<option>Orthopedics</option>
+
+<option>Dermatology</option>
+
+</select>
+
+<select name="doctor" required>
+
+<option value="">Select Doctor</option>
+
+<option>Dr. Sharma</option>
+
+<option>Dr. Khan</option>
+
+<option>Dr. Patel</option>
+
+<option>Dr. Rao</option>
+
+</select>
+
+<input type="date"
+name="date"
+required>
+
+<input type="time"
+name="time"
+required>
+
+<button type="submit">
+Book Appointment
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
